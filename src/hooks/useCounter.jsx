@@ -4,9 +4,9 @@ export const useCounter = () => {
   const [count, setCount] = useState(1);
   const [isShow, setIsShow] = useState(true);
 
-    const doubleCount = useMemo(() => {
-        return count * 2;
-    },[count]);
+  const doubleCount = useMemo(() => {
+    return count * 2;
+  }, [count]);
 
   const handleClick = useCallback(() => {
     if (count < 10) {
@@ -18,5 +18,5 @@ export const useCounter = () => {
     setIsShow((prevIsShow) => !prevIsShow);
   }, []);
 
-  return { count, doubleCount,isShow, handleClick, handleDisplay };
+  return { count, doubleCount, isShow, handleClick, handleDisplay };
 };
