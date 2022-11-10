@@ -5,7 +5,7 @@ export const Links = (props) => {
     <div className={classes.grid}>
       {props.items.map((item) => {
         return (
-          <a key={item.href} href={item.href} className={classes.card}>
+          <a key={item.href} href={item.href} z>
             <h2 className={classes.title}>{item.title}</h2>
             <p className={classes.description}>{item.description}</p>
           </a>
